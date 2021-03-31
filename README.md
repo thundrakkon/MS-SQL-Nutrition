@@ -6,7 +6,7 @@ The purpose of this project is to extract nutrition data from the USDA FoodData 
 
 ### Skills, Database, and Programs
 
-SQL, T-SQL, API, JSON, MS SQL Server 2019, Visual Studio, and MS Excel.
+SQL, T-SQL, API, JSON, MS SQL Server 2019, Visual Studio, MS Excel, and Notepad++.
 
 ### Procedure
 
