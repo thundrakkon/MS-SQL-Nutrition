@@ -31,3 +31,26 @@ CROSS APPLY OPENJSON(TableA.foodNutrients)
 		amount		FLOAT,
 		unitName	VARCHAR(20)
 	) as TableNutrients
+
+DROP TABLE FoodNutrition
+
+CREATE TABLE FoodNutrition (
+	fdcId			INT,
+	description		VARCHAR(100),
+	dataType		VARCHAR(100),
+	publicationDate	DATE,
+	number			INT,
+	name			VARCHAR(100),
+	amount			FLOAT,
+	unitName		VARCHAR(20)
+	);
+
+INSERT INTO FoodNutrition
+SELECT 
+TableA.fdcId,
+TableA.description,
+TableA.dataType,
+TableA.publicationDate,
+TableNutrients.*
+
+FROM OPENJSON(@FoodJSON)
